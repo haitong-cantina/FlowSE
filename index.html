@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>SELM: Speech Enhancement Using Coarse-Grained Discrete Tokens and Language Models</title>
+  <title>FlowSE: A Flow Matching Model For Speech Enhancement</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -123,75 +123,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">SELM: Speech Enhancement Using Coarse-Grained Discrete Tokens and Language Models</h1>
+            <h1 class="title is-1 publication-title">FlowSE: A Flow Matching Model For Speech Enhancement</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://github.com/Honee-W" target="_blank">Ziqian Wang</a>,</span>
-                <span class="author-block">
-                  <a  target="_blank">Xinfa Zhu</a>,</span>
-                  <span class="author-block">
-                    <a target="_blank">Zihan Zhang</a>,</span>
-                    <a target="_blank">Yuanjun Lv</a>,</span>
-                    <a target="_blank">Ning Jiang</a>,</span>
-                    <a target="_blank">Guoqing Zhao</a>,</span>
-                    <a target="_blank">Lei Xie</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Audio, Speech and Language Processing Group (ASLP@NPU)
-                      School of Computer Science,<p>  Northwestern Polytechnical University, Xi’an, China<br>
-                      <!--Conferance name and year--></span>
-                      <span class="author-block">Mashang Consumer Finance Co., Ltd.<br>
-                        <!--Conferance name and year--></span>                      
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
-                  <!-- Github link -->
-                  <!-- <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span> -->
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+              
             </div>
           </div>
         </div>
@@ -225,16 +160,27 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Language Models (LMs) have shown superior performances in
-            various speech generation tasks recently, demonstrating their powerful ability for semantic context modeling. Given the intrinsic similarity between speech generation and speech enhancement, harnessing
-            semantic information holds potential advantages for speech enhancement tasks. In light of this, we propose SELM, a novel paradigm for
-            speech enhancement, which integrates discrete tokens and leverages
-            language models. SELM comprises three stages: encoding, modeling, and decoding. We transform continuous waveform signals
-            into discrete tokens using pre-trained self-supervised learning (SSL)
-            models and a k-means tokenizer. Language models then capture
-            comprehensive contextual information within these tokens. Finally,
-            a detokenizer and HiFi-GAN restore them into enhanced speech. Experimental results demonstrate that SELM achieves comparable performance in objective metrics alongside superior results in subjective
-            perception.         
+            Generative models have excelled in audio tasks using frame- 2
+            works like codec, language models, diffusion, and flow match- 3
+            ing. However, existing generative approaches for speech en- 4
+            hancement (SE) face notable challenges: language model-based 5
+            methods often degrade timbre and intelligibility due to quanti- 6
+            zation loss, while diffusion models suffer from complex train- 7
+            ing and high inference latency. To address these challenges, 8
+            we propose FlowSE, to our knowledge, the first flow-matching 9
+            model for SE. FlowSE trains on noisy mel spectrograms and op- 10
+            tional character sequences, optimizing a condition flow match- 11
+            ing loss with ground-truth mel spectrograms as labels. It implic- 12
+            itly learns speech's temporal-spectral structure and text-speech 13
+            alignment. During inference, FlowSE can operate with only 14
+            noisy mel spectrograms or with additional transcripts, achiev- 15
+            ing impressive results in both scenarios. With transcripts, 16
+            FlowSE delivers even higher performance. Extensive experi- 17
+            ments demonstrate that FlowSE significantly outperforms state- 18
+            of-the-art generative methods, establishing a new paradigm for 19
+            generative-based SE and demonstrating the potential of flow 20
+            matching to advance the field. Our code, pre-trained check- 21
+            points, and audio samples are available.         
           </p>
         </div>
       </div>
@@ -251,18 +197,12 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="has-text-centered">
         <!-- Your image here -->
-        <img src="static/images/SELM.png" alt="MY ALT TEXT" />
+        <img src="static/images/structure.png" alt="MY ALT TEXT" />
         <h2 class="subtitle">
-          Overview of the SELM framework. SELM handles SE tasks by using transformer-based LMs conditioned on discrete tokens.
+          Overview of the FlowSE framework.
         </h2>
       </div>
-      <div class="has-text-centered">
-        <!-- Your image here -->
-        <img src="static/images/llm.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle">
-          The details of the modeling stage.
-        </h2>
-      </div>
+      
   </div>
 </div>
 </div>
@@ -276,7 +216,7 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Speech Denoising with SELM</h2>
+      <h2 class="title is-3">Speech Denoising with FlowSE</h2>
 
       <!-- <h2 class="title is-4">Samples from DNS challenge - Interspeech 2021 Real-Recordings Testset</h2> -->
       
@@ -393,6 +333,7 @@
             <img src="static/images/clean/5.png" alt="clean">
             <img src="static/images/noisy/5.png" alt="mix">
             <img src="static/images/enhanced/5.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/5.png" alt="enhanced_wotext">
           </div>
           <div class="audio-container">
             <div class="audio-item">
@@ -416,6 +357,14 @@
               </audio>
               <p>enhanced_1.wav</p>
             </div>
+
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/5.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_1.wav</p>
+            </div>
           </div>          
         </div>
       </div>
@@ -426,6 +375,7 @@
             <img src="static/images/clean/28.png" alt="clean">
             <img src="static/images/noisy/28.png" alt="mix">
             <img src="static/images/enhanced/28.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/28.png" alt="enhanced_wotext">
           </div>
           <div class="audio-container">
             <div class="audio-item">
@@ -449,6 +399,13 @@
               </audio>
               <p>enhanced_2.wav</p>
             </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/28.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_2.wav</p>
+            </div>
           </div>          
         </div>
       </div>
@@ -459,6 +416,7 @@
             <img src="static/images/clean/15.png" alt="clean">
             <img src="static/images/noisy/15.png" alt="mix">
             <img src="static/images/enhanced/15.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/15.png" alt="enhanced_wotext">
           </div>
           <div class="audio-container">
             <div class="audio-item">
@@ -482,6 +440,13 @@
               </audio>
               <p>enhanced_3.wav</p>
             </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/15.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_3.wav</p>
+            </div>
           </div>          
         </div>
       </div>
@@ -493,6 +458,7 @@
             <img src="static/images/clean/36.png" alt="clean">
             <img src="static/images/noisy/36.png" alt="mix">
             <img src="static/images/enhanced/36.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/36.png" alt="enhanced_wotext">
           </div>
           <div class="audio-container">
             <div class="audio-item">
@@ -516,6 +482,13 @@
               </audio>
               <p>enhanced_4.wav</p>
             </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/36.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_4.wav</p>
+            </div>
           </div>          
         </div>
       </div>
@@ -527,6 +500,7 @@
             <img src="static/images/clean/48.png" alt="clean">
             <img src="static/images/noisy/48.png" alt="mix">
             <img src="static/images/enhanced/48.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/48.png" alt="enhanced_wotext">
           </div>
           <div class="audio-container">
             <div class="audio-item">
@@ -550,6 +524,13 @@
               </audio>
               <p>enhanced_5.wav</p>
             </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/48.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_5.wav</p>
+            </div>
           </div>          
         </div>
       </div>
@@ -560,6 +541,7 @@
             <img src="static/images/clean/39.png" alt="clean">
             <img src="static/images/noisy/39.png" alt="mix">
             <img src="static/images/enhanced/39.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/39.png" alt="enhanced_wotext">
           </div>
           <div class="audio-container">
             <div class="audio-item">
@@ -583,6 +565,13 @@
               </audio>
               <p>enhanced_6.wav</p>
             </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/39.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_6.wav</p>
+            </div>
           </div>          
         </div>
       </div>
@@ -593,6 +582,7 @@
             <img src="static/images/clean/42.png" alt="clean">
             <img src="static/images/noisy/42.png" alt="mix">
             <img src="static/images/enhanced/42.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/42.png" alt="enhanced_wotext">
           </div>
           <div class="audio-container">
             <div class="audio-item">
@@ -615,6 +605,218 @@
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_7.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/42.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_7.wav</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">          
+          <div class="image-container">
+            <img src="static/images/clean/55.png" alt="clean">
+            <img src="static/images/noisy/55.png" alt="mix">
+            <img src="static/images/enhanced/55.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/55.png" alt="enhanced_wotext">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item">
+              <audio controls>
+                  <source src="static/audio/clean/55.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>        
+              <p>clean_8.wav</p>
+            </div>
+            <div class="audio-item">   
+              <audio controls>
+                  <source src="static/audio/noisy/55.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>mix_8.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced/55.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_8.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/55.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_8.wav</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">          
+          <div class="image-container">
+            <img src="static/images/clean/59.png" alt="clean">
+            <img src="static/images/noisy/59.png" alt="mix">
+            <img src="static/images/enhanced/59.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/59.png" alt="enhanced_wotext">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item">
+              <audio controls>
+                  <source src="static/audio/clean/59.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>        
+              <p>clean_9.wav</p>
+            </div>
+            <div class="audio-item">   
+              <audio controls>
+                  <source src="static/audio/noisy/59.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>mix_9.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced/59.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_9.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/59.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_9.wav</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">          
+          <div class="image-container">
+            <img src="static/images/clean/62.png" alt="clean">
+            <img src="static/images/noisy/62.png" alt="mix">
+            <img src="static/images/enhanced/62.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/62.png" alt="enhanced_wotext">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item">
+              <audio controls>
+                  <source src="static/audio/clean/62.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>        
+              <p>clean_10.wav</p>
+            </div>
+            <div class="audio-item">   
+              <audio controls>
+                  <source src="static/audio/noisy/62.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>mix_10.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced/62.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_10.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/62.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_10.wav</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">          
+          <div class="image-container">
+            <img src="static/images/clean/63.png" alt="clean">
+            <img src="static/images/noisy/63.png" alt="mix">
+            <img src="static/images/enhanced/63.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/63.png" alt="enhanced_wotext">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item">
+              <audio controls>
+                  <source src="static/audio/clean/63.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>        
+              <p>clean_11.wav</p>
+            </div>
+            <div class="audio-item">   
+              <audio controls>
+                  <source src="static/audio/noisy/63.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>mix_11.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced/63.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_11.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/63.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_11.wav</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">          
+          <div class="image-container">
+            <img src="static/images/clean/64.png" alt="clean">
+            <img src="static/images/noisy/64.png" alt="mix">
+            <img src="static/images/enhanced/64.png" alt="enhanced">
+            <img src="static/images/enhanced_wotext/64.png" alt="enhanced_wotext">
+          </div>
+          <div class="audio-container">
+            <div class="audio-item">
+              <audio controls>
+                  <source src="static/audio/clean/64.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>        
+              <p>clean_12.wav</p>
+            </div>
+            <div class="audio-item">   
+              <audio controls>
+                  <source src="static/audio/noisy/64.wav" type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>mix_12.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced/64.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_12.wav</p>
+            </div>
+            <div class="audio-item">      
+              <audio controls>
+                  <source src="static/audio/enhanced_wotext/64.wav"  type="audio/wav">
+                  Your browser does not support the audio element.
+              </audio>
+              <p>enhanced_wotext_12.wav</p>
             </div>
           </div>          
         </div>
