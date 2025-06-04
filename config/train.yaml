@@ -14,7 +14,6 @@ train:
 
 #
 model: &model_conf
-  name: F5TTS_Base
   tokenizer: pinyin
   tokenizer_path: Emilia_ZH_EN_pinyin/vocab.txt
   audio_drop_prob: 0
