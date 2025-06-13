@@ -120,7 +120,7 @@ def run(args):
             
                 output,_ = nnet.sample(cond = mix,text=[text])
             elif conf['test']['cond_type'] == 'wotext':
-                output,_ = nnet.sample(cond = mix,text=[""],drop_text=True)
+                output,_ = nnet.sample(cond = mix,text=[" "],drop_text=True)
 
 
             if egs["utt_id"].find("/") != -1:
