@@ -55,11 +55,11 @@ If you find **FlowSE** useful in your research or work, please consider citing o
 
 ```bibtex
 @misc{wang2025flowseefficienthighqualityspeech,
-      title={FlowSE: Efficient and High-Quality Speech Enhancement via Flow Matching}, 
+      title={FlowSE: Efficient and High-Quality Speech Enhancement via Flow Matching},
       author={Ziqian Wang and Zikai Liu and Xinfa Zhu and Yike Zhu and Mingshuai Liu and Jun Chen and Longshuai Xiao and Chao Weng and Lei Xie},
       year={2025},
       eprint={2505.19476},
       archivePrefix={arXiv},
       primaryClass={eess.AS},
-      url={https://arxiv.org/abs/2505.19476}, 
+      url={https://arxiv.org/abs/2505.19476},
 }

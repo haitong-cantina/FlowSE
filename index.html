@@ -50,7 +50,7 @@
       display: flex; /* Use flexbox for horizontal alignment */
       justify-content: center; /* Center items horizontally */
     }
-  
+
     .image-container img {
       max-width: 30%; /* Adjust the width as needed */
       height: auto;
@@ -78,7 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     }
 
     .audio-item {
@@ -105,7 +105,7 @@
       margin-right: 5em;
     }
 
-    
+
 
     .audio-item p {
         margin-top: 10px;
@@ -126,7 +126,7 @@
             <h1 class="title is-1 publication-title">FlowSE: Efficient and High-Quality Speech Enhancement via Flow Matching</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              
+
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
       </h2>
     </div>
   </div>
@@ -160,7 +160,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Generative models have excelled in audio tasks using frameworks like codec, language models, diffusion, and flow matching. However, existing generative approaches for speech enhancement (SE) face notable challenges: language model-based methods often degrade timbre and intelligibility due to quantization loss, while diffusion models suffer from complex training and high inference latency. To address these challenges, we propose FlowSE, to our knowledge, the first flow-matching model for SE. FlowSE trains on noisy mel spectrograms and optional character sequences, optimizing a condition flow matching loss with ground-truth mel spectrograms as labels. It implicitly learns speech’s temporal-spectral structure and text-speech alignment. During inference, FlowSE can operate with only noisy mel spectrograms or with additional transcripts, achieving impressive results in both scenarios. With transcripts, FlowSE delivers even higher performance. Extensive experiments demonstrate that FlowSE significantly outperforms state-of-the-art generative methods, establishing a new paradigm for generative-based SE and demonstrating the potential of flow matching to advance the field. Our code, pre-trained checkpoints, and audio samples are available      
+            Generative models have excelled in audio tasks using frameworks like codec, language models, diffusion, and flow matching. However, existing generative approaches for speech enhancement (SE) face notable challenges: language model-based methods often degrade timbre and intelligibility due to quantization loss, while diffusion models suffer from complex training and high inference latency. To address these challenges, we propose FlowSE, to our knowledge, the first flow-matching model for SE. FlowSE trains on noisy mel spectrograms and optional character sequences, optimizing a condition flow matching loss with ground-truth mel spectrograms as labels. It implicitly learns speech’s temporal-spectral structure and text-speech alignment. During inference, FlowSE can operate with only noisy mel spectrograms or with additional transcripts, achieving impressive results in both scenarios. With transcripts, FlowSE delivers even higher performance. Extensive experiments demonstrate that FlowSE significantly outperforms state-of-the-art generative methods, establishing a new paradigm for generative-based SE and demonstrating the potential of flow matching to advance the field. Our code, pre-trained checkpoints, and audio samples are available
           </p>
         </div>
       </div>
@@ -197,105 +197,105 @@
       <h2 class="title is-3">Speech Denoising with FlowSE</h2>
 
       <!-- <h2 class="title is-4">Samples from DNS challenge - Interspeech 2021 Real-Recordings Testset</h2> -->
-      
+
       <!-- <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container2">
             <img src="static/images/noisy/audioset_realrec_airconditioner_2TE3LoA2OUQ.png" alt="mix">
             <img src="static/images/enhanced/audioset_realrec_airconditioner_2TE3LoA2OUQ.png" alt="enhanced">
           </div>
           <div class="audio-container">
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/audioset_realrec_airconditioner_2TE3LoA2OUQ.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>audioset_realrec_airconditioner_2TE3LoA2OUQ_noisy.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/audioset_realrec_airconditioner_2TE3LoA2OUQ.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>audioset_realrec_airconditioner_2TE3LoA2OUQ_enhanced.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container2">
             <img src="static/images/noisy/audioset_realrec_airconditioner_7EYjHph6ZgM.png" alt="mix">
             <img src="static/images/enhanced/audioset_realrec_airconditioner_7EYjHph6ZgM.png" alt="enhanced">
           </div>
           <div class="audio-container">
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/audioset_realrec_airconditioner_7EYjHph6ZgM.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>audioset_realrec_airconditioner_7EYjHph6ZgM_noisy.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/audioset_realrec_airconditioner_7EYjHph6ZgM.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>audioset_realrec_airconditioner_7EYjHph6ZgM_enhanced.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container2">
             <img src="static/images/noisy/audioset_realrec_airconditioner_C91TcL6jQws.png" alt="mix">
             <img src="static/images/enhanced/audioset_realrec_airconditioner_C91TcL6jQws.png" alt="enhanced">
           </div>
           <div class="audio-container">
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/audioset_realrec_airconditioner_C91TcL6jQws.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>audioset_realrec_airconditioner_C91TcL6jQws_noisy.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/audioset_realrec_airconditioner_C91TcL6jQws.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>audioset_realrec_airconditioner_C91TcL6jQws_enhanced.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container2">
             <img src="static/images/noisy/audioset_realrec_car__1h9umA8agI.png" alt="mix">
             <img src="static/images/enhanced/audioset_realrec_car__1h9umA8agI.png" alt="enhanced">
           </div>
           <div class="audio-container">
-            <div class="audio-item2">   
+            <div class="audio-item2">
               <audio controls>
                   <source src="static/audio/noisy/audioset_realrec_car__1h9umA8agI.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>audioset_realrec_car__1h9umA8agI_noisy.wav</p>
             </div>
-            <div class="audio-item3">      
+            <div class="audio-item3">
               <audio controls>
                   <source src="static/audio/enhanced/audioset_realrec_car__1h9umA8agI.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>audioset_realrec_car__1h9umA8agI_enhanced.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>       -->
 
@@ -306,7 +306,7 @@
 
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/5.png" alt="clean">
             <img src="static/images/noisy/5.png" alt="mix">
@@ -319,17 +319,17 @@
               <audio controls>
                   <source src="static/audio/clean/5.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_1.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/5.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_1.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/5.wav"  type="audio/wav">
                   Your browser does not support the audio element.
@@ -337,19 +337,19 @@
               <p>enhanced_1.wav</p>
             </div>
 
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/5.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_1.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/28.png" alt="clean">
             <img src="static/images/noisy/28.png" alt="mix">
@@ -362,36 +362,36 @@
               <audio controls>
                   <source src="static/audio/clean/28.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_2.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/28.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_2.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/28.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_2.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/28.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_2.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/15.png" alt="clean">
             <img src="static/images/noisy/15.png" alt="mix">
@@ -404,37 +404,37 @@
               <audio controls>
                   <source src="static/audio/clean/15.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_3.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/15.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_3.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/15.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_3.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/15.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_3.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/36.png" alt="clean">
             <img src="static/images/noisy/36.png" alt="mix">
@@ -447,37 +447,37 @@
               <audio controls>
                   <source src="static/audio/clean/36.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_4.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/36.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_4.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/36.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_4.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/36.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_4.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/48.png" alt="clean">
             <img src="static/images/noisy/48.png" alt="mix">
@@ -490,36 +490,36 @@
               <audio controls>
                   <source src="static/audio/clean/48.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_5.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/48.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_5.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/48.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_5.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/48.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_5.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/39.png" alt="clean">
             <img src="static/images/noisy/39.png" alt="mix">
@@ -532,36 +532,36 @@
               <audio controls>
                   <source src="static/audio/clean/39.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_6.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/39.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_6.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/39.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_6.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/39.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_6.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/42.png" alt="clean">
             <img src="static/images/noisy/42.png" alt="mix">
@@ -574,36 +574,36 @@
               <audio controls>
                   <source src="static/audio/clean/42.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_7.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/42.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_7.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/42.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_7.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/42.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_7.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/55.png" alt="clean">
             <img src="static/images/noisy/55.png" alt="mix">
@@ -616,36 +616,36 @@
               <audio controls>
                   <source src="static/audio/clean/55.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_8.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/55.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_8.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/55.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_8.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/55.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_8.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/59.png" alt="clean">
             <img src="static/images/noisy/59.png" alt="mix">
@@ -658,36 +658,36 @@
               <audio controls>
                   <source src="static/audio/clean/59.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_9.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/59.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_9.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/59.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_9.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/59.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_9.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/62.png" alt="clean">
             <img src="static/images/noisy/62.png" alt="mix">
@@ -700,36 +700,36 @@
               <audio controls>
                   <source src="static/audio/clean/62.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_10.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/62.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_10.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/62.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_10.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/62.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_10.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/63.png" alt="clean">
             <img src="static/images/noisy/63.png" alt="mix">
@@ -742,36 +742,36 @@
               <audio controls>
                   <source src="static/audio/clean/63.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_11.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/63.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_11.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/63.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_11.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/63.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_11.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">          
+        <div class="column is-four-fifths">
           <div class="image-container">
             <img src="static/images/clean/64.png" alt="clean">
             <img src="static/images/noisy/64.png" alt="mix">
@@ -784,31 +784,31 @@
               <audio controls>
                   <source src="static/audio/clean/64.wav" type="audio/wav">
                   Your browser does not support the audio element.
-              </audio>        
+              </audio>
               <p>clean_12.wav</p>
             </div>
-            <div class="audio-item">   
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/noisy/64.wav" type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>mix_12.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced/64.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_12.wav</p>
             </div>
-            <div class="audio-item">      
+            <div class="audio-item">
               <audio controls>
                   <source src="static/audio/enhanced_wotext/64.wav"  type="audio/wav">
                   Your browser does not support the audio element.
               </audio>
               <p>enhanced_wotext_12.wav</p>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
 
@@ -861,7 +861,7 @@
 
       <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
-        
+
       </div>
     </div>
   </section> -->
@@ -907,7 +907,7 @@
 </footer>
 
 <!-- Statcounter tracking code -->
-  
+
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->

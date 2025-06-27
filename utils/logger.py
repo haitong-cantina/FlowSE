@@ -2,13 +2,14 @@ import logging
 
 
 def get_logger(
-        name,
-        format_str="%(asctime)s [%(pathname)s:%(lineno)s - %(levelname)s ] %(message)s",
-        date_format="%Y-%m-%d %H:%M:%S",
-        file=False):
-    '''
+    name,
+    format_str="%(asctime)s [%(pathname)s:%(lineno)s - %(levelname)s ] %(message)s",
+    date_format="%Y-%m-%d %H:%M:%S",
+    file=False,
+):
+    """
     Get logger instance
-    '''
+    """
 
     def get_handler(handler):
         handler.setLevel(logging.INFO)

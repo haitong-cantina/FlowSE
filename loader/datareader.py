@@ -6,21 +6,27 @@ import torch
 import json
 import os
 
-class DataReader(object):
-    def __init__(self,
-                 mix_json,
-                 mix_dir,
-                 mix_fs=16000):
 
-        with open(mix_json,'r') as f:
-            self.mix_json =  json.load(f) 
+class DataReader(object):
+    def __init__(self, mix_json, mix_dir, mix_fs=24000):
+
+        with open(mix_json, "r") as f:
+            self.mix_json = json.load(f)
         self.utt = list(self.mix_json.keys())
-        
+
         self.mix_dir = mix_dir
         self.mix_fs = mix_fs
 
     def extract_feature(self, utt):
-        mix_path = os.path.join(self.mix_dir,utt) + '.wav'
+        for extension in [".wav", ".flac", ".mp3"]:
+            file_path = os.path.join(self.mix_dir, utt) + extension
+            if os.path.exists(file_path):
+                mix_path = file_path
+                break
+        else:
+            raise FileNotFoundError(
+                f"Mix file for utterance {utt} not found in {self.mix_dir}"
+            )
         text = self.mix_json[utt]
         mix_data = self.get_firstchannel_read(mix_path, self.mix_fs).astype(np.float32)
 
@@ -28,11 +34,7 @@ class DataReader(object):
 
         mix_input = torch.from_numpy(mix_input)
 
-        egs = {
-            'utt_id': utt,
-            'mix': mix_input,
-            'text':text
-        }
+        egs = {"utt_id": utt, "mix": mix_input, "text": text, "orig_freq": self.mix_fs}
 
         return egs
 
@@ -41,8 +43,6 @@ class DataReader(object):
 
     def __getitem__(self, index):
         return self.extract_feature(self.utt[index])
-    
-        
 
     def get_firstchannel_read(self, path, fs, channel=0):
         wave_data, sr = sf.read(path)
@@ -55,7 +55,3 @@ class DataReader(object):
         if len(wave_data.shape) > 1:
             wave_data = wave_data[:, channel]
         return wave_data
-
-
-
-

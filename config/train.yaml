@@ -35,7 +35,7 @@ model: &model_conf
     n_fft: 1024
     mel_spec_type: vocos  # 'vocos' or 'bigvgan'
   vocoder:
-    is_local: True  # use local offline ckpt or not
+    is_local: False  # use local offline ckpt or not
     local_path: vocos-mel-24khz  # local vocoder path
 
 optim:
@@ -67,7 +67,7 @@ datasets:
     text_scp: datalist/train/text_cv.json
 
   dataloader_setting:
-    repeat: 1 
+    repeat: 1
     batch_size: 6010
     max_samples: 64
     num_workers: 16
@@ -83,7 +83,7 @@ datasets:
       "10_to_20": 0.2
     scale_ranges:
       "-35_to_-15": 1.0
-    
+
 
 
 ########################################################
@@ -93,19 +93,18 @@ infer:
 
   test:
     checkpoint: ckpts
-    cond_type: noisy
-    pt_name: best.pt.tar
+    cond_type: wotext  # noisy wotext
+    pt_name: wenetspeech4tts_Premium.pt.tar
     use_cuda: True
 
   save:
-    dir: test_out
+    dir:  /fsx/tts/haitong/data/speech_enhancement/test_data/movie/flowse/denoised # /fsx/tts/haitong/data/speech_enhancement/test_data/ex-0102-style_needs_denoise/flowse/denoised/ # test_out_wotext
     fs: 16000
 
   datareader:
-    mix_json: datalist/test/text.json
-    mix_dir: datalist/test/noisy
+    mix_json: datalist/test/movie.json # datalist/test/style.json # datalist/test/text.json
+    mix_dir:  /fsx/tts/haitong/data/speech_enhancement/test_data/movie/noisy # /fsx/tts/haitong/data/speech_enhancement/test_data/ex-0102-style_needs_denoise/noisy # datalist/test/noisy
     mix_fs: 16000
 
   nnet_conf:
     *model_conf
-
